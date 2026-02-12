@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this is only for hafsa</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 5vw;
+      margin: 0;
+    }
+
+    .card {
+      background-color: white;
+      padding: 5vw;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #ff4081;
+      font-size: clamp(24px, 7vw, 48px);
+    }
+
+    h2 {
+      color: #333;
+      margin-top: 10px;
+      font-size: 5vw;
+    }
+
+    p {
+      font-size: 4vw;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .balloons {
+      font-size: 6vw;
+    }
+
+    .footer {
+      margin-top: 20px;
+      color: #999;
+      font-size: 3.5vw;
+    }
+
+    .friend-pic {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 48px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+
+      .balloons {
+        font-size: 40px;
+      }
+
+      .footer {
+        font-size: 14px;
+      }
+    }
+
+#yesBtn2, #noBtn2 {
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  background: #ff4081;   /* same color */
+  color: white;
+  transition: left 0.25s ease, top 0.25s ease;
+}
+
+#noBtn2 {
+  position: relative;
+}
+
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  top: -10px;
+  font-size: 20px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="hearts" id="hearts"></div>
+
+  <div class="card">
+    <h1>My love for you baby😘</h1>
+    <h2>To my life🧬, my love💖, and my future🌏</h2>
+
+    <p>
+      Love is real, no matter what anyone says. Distance and time can’t change how I feel. One look, one message, one smile from you makes everything worth it. love doesn't just mean staying when it's easy, it means staying when it gets hard, when we don't know where to go, that's where true love starts</p>
+<p>If miles could listen, they’d hear my heart calling your name.</p>
+<p>I’m just waiting for the day we finally meet and have our first kiss, I don't know how I'll stop kissing you that time.💗</p>
+<div class="footer">
+  till I meet you for the first time💗💗💗
+</div>
+</div>
+<h1>
+
+</h1>
+<h3>Send me your answer 😁</h3>
+
+<form action="https://formsubmit.co/attakhan546601@gmail.com" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://example.com/thankyou.html">
+
+  Name:<br>
+  <input type="text" name="name" required><br><br>
+
+  Email:<br>
+  <input type="email" name="email" required><br><br>
+
+  <h3>Will you be my Valentine? 💘</h3>
+
+  <button type="submit" name="answer" value="Yes" id="yesBtn2">
+    Yes 💖
+  </button>
+
+  <button type="button" id="noBtn2">
+    No 😜
+  </button>
+</form>
+
+<script>
+const noBtn2 = document.getElementById("noBtn2");
+
+let currentX = 0;
+let currentY = 0;
+
+function moveNo2() {
+  const step = 400; // small noticeable nudge
+  currentX += (Math.random() - 0.5) * step;
+  currentY += (Math.random() - 0.5) * step;
+
+  noBtn2.style.left = currentX + "px";
+  noBtn2.style.top = currentY + "px";
+}
+
+noBtn2.addEventListener("mouseover", moveNo2);
+noBtn2.addEventListener("click", moveNo2);
+</script>
+
+<script>
+const hearts = document.getElementById("hearts");
+
+function createHeart() {
+  const h = document.createElement("div");
+  h.className = "heart";
+  h.textContent = "💗";
+
+  h.style.left = Math.random() * 100 + "vw";
+  h.style.animationDuration = (Math.random() * 3 + 3) + "s";
+  h.style.fontSize = (Math.random() * 10 + 15) + "px";
+
+  hearts.appendChild(h);
+
+  setTimeout(() => h.remove(), 6000);
+}
+
+setInterval(createHeart, 200);
+</script>
+
+</body>
+</html>
